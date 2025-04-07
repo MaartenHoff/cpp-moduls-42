@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maahoff <maahoff@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/06 15:00:50 by maahoff           #+#    #+#             */
-/*   Updated: 2025/04/07 15:34:41 by maahoff          ###   ########.fr       */
+/*   Created: 2025/04/07 14:58:18 by maahoff           #+#    #+#             */
+/*   Updated: 2025/04/07 15:35:19 by maahoff          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
 #include <string>
-#include <iomanip>
-#include "Contact.hpp"
 
-class PhoneBook 
+class Contact
 {
 	public:
-		PhoneBook();
-		void addContact();
-		void displayContacts();
-	
-	private:
-		Contact contacts[8];
-		int num;
-		int i;
+		void	insertInfo();
+		std::string	firstName;
+		std::string	lastName;
+		std::string	nickname;
+		std::string	number;
+		std::string	secret;
 };

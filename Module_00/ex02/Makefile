@@ -1,5 +1,5 @@
-NAME        = phonebook
-SRCS        = main.cpp Contact.cpp PhoneBook.cpp
+NAME        = Account
+SRCS        = Account.cpp tests.cpp
 OBJDIR      = .obj
 OBJS        = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
