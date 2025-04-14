@@ -1,10 +1,10 @@
-NAME        = BraiiiiiiinnnzzzZ
-SRCS        = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
-OBJDIR      = .obj
-OBJS        = $(SRCS:%.cpp=$(OBJDIR)/%.o)
+NAME		= brain
+SRCS		= main.cpp
+OBJDIR		= .obj
+OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
-CXX         = c++
-CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
+CXX			= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
