@@ -3,10 +3,13 @@
 
 class	HumanB
 {
-	public:
+	private:
 		std::string	name;
-		Weapon		club;
+		Weapon		*club;
+
+	public:
 		HumanB( std::string	name );
+
 		void		attack();
-		void		setWeapon(Weapon club);
+		void		setWeapon(Weapon &club);
 };

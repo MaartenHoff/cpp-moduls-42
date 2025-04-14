@@ -1,13 +1,13 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB( std::string name ) : name(name), club("default") {}
+HumanB::HumanB( std::string name ) : name(name), club(NULL) {}
 
-void	HumanB::setWeapon(Weapon club)
+void	HumanB::setWeapon(Weapon &weapon)
 {
-	this->club = club;
+	club = &weapon;
 }
 
 void	HumanB::attack()
 {
-	std::cout << name << " attacks with their " << club.getType() << std::endl;
+	std::cout << name << " attacks with their " << (*club).getType() << std::endl;
 }

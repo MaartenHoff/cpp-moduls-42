@@ -3,9 +3,13 @@
 
 class	HumanA
 {
-	public:
+	private:
 		std::string	name;
-		Weapon		club;
+		Weapon		&club;
+
+	public:
+		HumanA( std::string	name, Weapon &club );
+
 		void		attack();
-		HumanA( std::string	name, Weapon club );
+
 };
