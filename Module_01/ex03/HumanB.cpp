@@ -9,5 +9,8 @@ void	HumanB::setWeapon(Weapon &weapon)
 
 void	HumanB::attack()
 {
-	std::cout << name << " attacks with their " << (*club).getType() << std::endl;
+	if (!club)
+		std::cout << name << " attacks with their hands" << std::endl;
+	else
+		std::cout << name << " attacks with their " << (*club).getType() << std::endl;
 }

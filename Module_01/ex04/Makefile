@@ -1,5 +1,5 @@
 NAME		= sed
-SRCS		= main.cpp 
+SRCS		= main.cpp fileContent.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
