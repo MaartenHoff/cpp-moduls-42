@@ -7,7 +7,7 @@ int main()
     Point a(0, 0);
     Point b(10, 0);
     Point c(0, 10);
-    Point p(100, 100);
+    Point p(-1, 1);
     
     if (bsp(a, b, c, p))
         std::cout << "Inside triangle" << std::endl;

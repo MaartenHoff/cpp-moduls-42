@@ -30,6 +30,8 @@ class Fixed
 		Fixed operator*(const Fixed &other) const;
 		Fixed operator/(const Fixed &other) const;
 
+		Fixed operator-() const;
+
 		Fixed &operator++();
 		Fixed operator++(int);
 		Fixed &operator--();

@@ -10,7 +10,7 @@ class Point
 		Point();
 		Point( float x, float y );
 		Point( const Point &copy );
-		Point &operator=( const Point &src );
+		Point &operator=(const Point &src);
 		~Point();
 
 		Fixed getX() const;
@@ -18,3 +18,4 @@ class Point
 };
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);
+std::ostream	&operator << (std::ostream& out, const Point& puanto);
