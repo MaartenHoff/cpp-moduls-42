@@ -1,5 +1,5 @@
 NAME		= fixed
-SRCS		= main.cpp Fixed.cpp
+SRCS		= main.cpp Fixed.cpp Point.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
