@@ -1,8 +1,13 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name) 
-	: _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {}
-ClapTrap::ClapTrap( const ClapTrap &other ) { *this = other; }
+	: _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
+		std::cout << "ClapTrap " << _name << " constructed\n";
+	}
+ClapTrap::ClapTrap( const ClapTrap &other ) { 
+	*this = other; 
+	std::cout << "ClapTrap " << _name << " copy constructed\n";
+}
 ClapTrap	&ClapTrap::operator=( const ClapTrap &other )
 {
 	_name = other._name;
@@ -11,7 +16,9 @@ ClapTrap	&ClapTrap::operator=( const ClapTrap &other )
 	_attackDamage = other._attackDamage;
 	return (*this);
 }
-ClapTrap::~ClapTrap() {}
+ClapTrap::~ClapTrap() {
+	std::cout << "ClapTrap " << _name << " destructed\n";
+}
 
 void	ClapTrap::attack(const std::string& target)
 {
