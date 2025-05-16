@@ -1,5 +1,5 @@
-NAME		= 
-SRCS		= main.cpp 
+NAME		= ScavTrap
+SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
