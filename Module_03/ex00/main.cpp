@@ -1,12 +1,12 @@
 #include "ClapTrap.hpp"
 
-int main()
-{
-	ClapTrap a("Bot1");
-	ClapTrap b("Bot2");
+int main() {
+	std::cout << "\n--- ClapTrap Test ---\n";
+	ClapTrap clap("Clappy");
+	clap.attack("Target A");
+	clap.takeDamage(5);
+	clap.beRepaired(3);
 
-	a.attack("Bot2");
-	b.takeDamage(3);
-	b.beRepaired(2);
+	std::cout << "\n--- Destruction Begins ---\n";
 	return 0;
 }
