@@ -1,5 +1,5 @@
-NAME		= FragTrap
-SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+NAME		= Diamond
+SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 

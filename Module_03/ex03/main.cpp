@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main() {
 	std::cout << "\n--- ClapTrap Test ---\n";
@@ -22,6 +23,14 @@ int main() {
 	frag.takeDamage(50);
 	frag.beRepaired(25);
 	frag.highFivesGuys();
+
+	std::cout << "\n--- DiamondTrap Test ---" << std::endl;
+	DiamondTrap diamy("Diamy");
+	diamy.attack("Target D");
+	diamy.takeDamage(40);
+	diamy.beRepaired(20);
+	diamy.whoAmI();
+	std::cout << "\n--- Destruction Begins ---" << std::endl;
 
 	std::cout << "\n--- Destruction Begins ---\n";
 	return 0;
