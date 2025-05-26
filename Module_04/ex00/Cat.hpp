@@ -7,5 +7,5 @@ public:
 	Cat();
 	~Cat();
 
-	void	makeSound();
+	void	makeSound() const ;
 };

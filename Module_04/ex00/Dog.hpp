@@ -7,5 +7,5 @@ public:
 	Dog();
 	~Dog();
 
-	void	makeSound();
+	void	makeSound() const ;
 };

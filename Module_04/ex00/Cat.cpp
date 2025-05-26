@@ -9,6 +9,6 @@ Cat::~Cat() {
 	std::cout << "Cat destructed" << std::endl;
 }
 
-void	Cat::makeSound() {
+void	Cat::makeSound() const {
 	std::cout << "Meow" << std::endl;
 }

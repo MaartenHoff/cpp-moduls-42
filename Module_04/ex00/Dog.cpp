@@ -9,6 +9,6 @@ Dog::~Dog() {
 	std::cout << "Dog destructed" << std::endl;
 }
 
-void	Dog::makeSound() {
+void	Dog::makeSound() const {
 	std::cout << "Woof" << std::endl;
 }
