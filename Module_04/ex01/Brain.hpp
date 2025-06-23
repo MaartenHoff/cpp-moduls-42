@@ -1,6 +1,7 @@
 #pragma once
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include <iostream>
+#include <string>
+#include <algorithm>
 
 class Brain
 {
@@ -12,6 +13,6 @@ public:
 	Brain	&operator = ( const Brain &other );
 	~Brain();
 
-	const std::string	&getIdea( int Number ) const;
-	void				setIdea( int Number, const std::string &Idea );
+	const std::string	&getIdea( int index ) const;
+	void				setIdea( int index, const std::string &idea );
 };
