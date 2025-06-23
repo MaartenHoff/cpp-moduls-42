@@ -3,19 +3,19 @@
 
 int main() {
 	std::cout << "=== Constructor Tests ===" << std::endl;
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	const Animal* A = new Animal();
+	const Animal* D = new Dog();
+	const Animal* C = new Cat();
 
 	std::cout << "\n=== getType Tests ===" << std::endl;
-	std::cout << "j type: " << j->getType() << std::endl;
-	std::cout << "i type: " << i->getType() << std::endl;
-	std::cout << "meta type: " << meta->getType() << std::endl;
+	std::cout << "D type: " << D->getType() << std::endl;
+	std::cout << "C type: " << C->getType() << std::endl;
+	std::cout << "A type: " << A->getType() << std::endl;
 
 	std::cout << "\n=== makeSound Tests ===" << std::endl;
-	i->makeSound(); // should output Cat sound
-	j->makeSound(); // should output Dog sound
-	meta->makeSound(); // should output generic Animal sound
+	C->makeSound(); // should output Cat sound
+	D->makeSound(); // should output Dog sound
+	A->makeSound(); // should output generic Animal sound
 
 	std::cout << "\n=== Copy & Assignment Tests ===" << std::endl;
 	Cat originalCat;
@@ -29,9 +29,9 @@ int main() {
 	assignedDog = originalDog;
 
 	std::cout << "\n=== Destructors ===" << std::endl;
-	delete meta;
-	delete j;
-	delete i;
+	delete A;
+	delete D;
+	delete C;
 
 	return 0;
 }
