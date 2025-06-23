@@ -31,5 +31,7 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 	Fixed A1 = area2(point,b,c);
 	Fixed A2 = area2(a,point,c);
 	Fixed A3 = area2(a,b,point);
+	if ((A1.toFloat() == 0 || A2.toFloat() == 0 || A3.toFloat() == 0))
+		return (false);
 	return (A1.toFloat() + A2.toFloat() + A3.toFloat()) == A0.toFloat();
 }

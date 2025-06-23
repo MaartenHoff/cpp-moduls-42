@@ -8,7 +8,10 @@ private:
 	std::string	_name;
 
 public:
+	DiamondTrap();
 	DiamondTrap( std::string _name );
+	DiamondTrap( const DiamondTrap &other );
+	DiamondTrap	&operator = ( const DiamondTrap &other );
 	~DiamondTrap();
 
 	using ScavTrap::attack;

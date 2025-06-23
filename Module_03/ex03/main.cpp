@@ -30,8 +30,8 @@ int main() {
 	diamy.takeDamage(40);
 	diamy.beRepaired(20);
 	diamy.whoAmI();
-	std::cout << "\n--- Destruction Begins ---" << std::endl;
 
-	std::cout << "\n--- Destruction Begins ---\n";
+	std::cout << "\n--- Destruction Begins ---" << std::endl;
+	
 	return 0;
 }
