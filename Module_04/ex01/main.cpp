@@ -59,14 +59,11 @@ int main() {
 
 	std::cout << "\n=== Deep Copy Brain Test ===" << std::endl;
 	Dog dog1;
-	dog1.->ideas[0] = "Chase ball";
-	Dog dog2(dog1);
-	std::cout << "Dog1 idea[0]: " << dog1.getBrain()->ideas[0] << std::endl;
-	std::cout << "Dog2 idea[0]: " << dog2.getBrain()->ideas[0] << std::endl;
-	dog2.getBrain()->ideas[0] = "Eat";
-	std::cout << "After change:" << std::endl;
-	std::cout << "Dog1 idea[0]: " << dog1.getBrain()->ideas[0] << std::endl;
-	std::cout << "Dog2 idea[0]: " << dog2.getBrain()->ideas[0] << std::endl;
+	dog1.getBrain()->setIdea(0, "Original dog idea");
+	Dog dog2 = dog1;
+	dog1.getBrain()->setIdea(0, "Modified dog idea");
 
+	std::cout << "dog1 brain[0]: " << dog1.getBrain()->getIdea(0) << std::endl;
+	std::cout << "dog2 brain[0]: " << dog2.getBrain()->getIdea(0) << std::endl;
 	return 0;
 }

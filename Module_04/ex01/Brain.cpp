@@ -1,17 +1,19 @@
 #include "Brain.hpp"
 
 Brain::Brain() {
+	for (int i = 0; i < 100; ++i)
+		ideas[i].clear();
 	std::cout << "Brain consructed" << std::endl;
 }
 
 Brain::Brain( const Brain &other) {
-	std::copy(std::begin(other.ideas), std::end(other.ideas), std::begin(ideas));
+	std::copy(other.ideas, other.ideas + 100, ideas);
 	std::cout << "Brain copied" << std::endl;
 }
 
 Brain	&Brain::operator = (const Brain &other ) {
 	if (this != &other) {
-		std::copy(std::begin(other.ideas), std::end(other.ideas), std::begin(ideas));
+		std::copy(other.ideas, other.ideas + 100, ideas);
 	}
 	std::cout << "Copy assignment operator in Brain" << std::endl;
 	return (*this);
@@ -22,9 +24,13 @@ Brain::~Brain() {
 }
 
 const std::string	&Brain::getIdea( int index ) const {
-	return (ideas[index]);
+	if (index >= 0 && index < 100)
+		return ideas[index];
+	static const std::string empty = "";
+	return empty;
 }
 
 void	Brain::setIdea( int index, const std::string &idea ) {
-	ideas[index] = idea;
+	if (index >= 0 && index < 100)
+		ideas[index] = idea;
 }
