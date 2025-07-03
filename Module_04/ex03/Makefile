@@ -1,5 +1,5 @@
 NAME		= Interface
-SRCS		= main.cpp AMateria.cpp ICharacter.cpp Character.cpp Core.cpp Ice.cpp MateriaSource.cpp IMateriaSource.cpp
+SRCS		= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 

@@ -9,10 +9,7 @@ AMateria::AMateria( AMateria const &other ) : type(other.type) {
 }
 
 AMateria &AMateria::operator=(AMateria const &other) {
-	if (this != &other) {
-		this->type = other.type;
-		std::cout << "Materia type: " << type << " copied" << std::endl;
-	}
+	(void)other;
 	return *this;
 }
 
