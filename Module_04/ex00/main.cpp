@@ -19,11 +19,11 @@ int main() {
 	std::cout << "WC type: " << WC->getType() << std::endl;
 
 	std::cout << "\n=== makeSound Tests ===" << std::endl;
-	C->makeSound(); // should output Cat sound
-	D->makeSound(); // should output Dog sound
-	A->makeSound(); // should output generic Animal sound
-	WC->makeSound(); // ruft WrongAnimal::makeSound(), da kein virtual
-	WA->makeSound(); // ruft WrongAnimal::makeSound()
+	C->makeSound(); // Cat sound
+	D->makeSound(); // Dog sound
+	A->makeSound(); // Animal sound
+	WC->makeSound(); // calls WrongAnimal::makeSound(), no virtual
+	WA->makeSound(); // calls WrongAnimal::makeSound()
 
 	std::cout << "\n=== Copy & Assignment Tests ===" << std::endl;
 	Cat originalCat;
