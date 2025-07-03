@@ -29,7 +29,7 @@ MateriaSource	&MateriaSource::operator=( const MateriaSource &other ) {
 		else
 			_templates[i] = other._templates[i]->clone();
 	}
-	std::cout << "* MateriaSource copied *" << std::endl;
+	std::cout << "MateriaSource copied" << std::endl;
 	return (*this);
 }
 MateriaSource::~MateriaSource() {
@@ -37,7 +37,7 @@ MateriaSource::~MateriaSource() {
 		if (_templates[i])
 			delete _templates[i];
 	}
-	std::cout << "* MateriaSource destructed *" << std::endl;
+	std::cout << "MateriaSource destructed" << std::endl;
 }
 
 void 		MateriaSource::learnMateria(AMateria *m) {

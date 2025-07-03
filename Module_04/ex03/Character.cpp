@@ -56,7 +56,7 @@ void	Character::equip( AMateria *m ) {
 		std::cout << "* " << name << " equips " << m->getType() << " *" << std::endl;
 	}
 	else
-		std::cout << " no inventory space " << std::endl;
+		std::cout << "* no inventory space *" << std::endl;
 }
 
 void	Character::unequip(int idx) {
