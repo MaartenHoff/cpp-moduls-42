@@ -1,5 +1,5 @@
-NAME		= 
-SRCS		= main.cpp 
+NAME		= Abstract
+SRCS		= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
