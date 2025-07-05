@@ -1,5 +1,5 @@
 NAME		= bureaucrat
-SRCS		= main.cpp Bureaucrat.cpp AForm.cpp
+SRCS		= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
