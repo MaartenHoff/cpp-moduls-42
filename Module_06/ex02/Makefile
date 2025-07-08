@@ -1,5 +1,5 @@
 NAME		= identify
-SRCS		= main.cpp
+SRCS		= main.cpp functions.cpp Base.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
