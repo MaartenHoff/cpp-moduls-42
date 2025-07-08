@@ -5,23 +5,23 @@ void	ScalarConverter::convert( const std::string& literal ) {
 	switch (type)
 	{
 		case TYPE_CHAR:
-			printFromChar(literal[0]);
+			ScalarConverter::printFromChar(literal[0]);
 			break;
 
 		case TYPE_INT:
-			printFromInt(std::atoi(literal.c_str()));
+			ScalarConverter::printFromInt(atoi(literal.c_str()));
 			break;
 
 		case TYPE_FLOAT:
-			printFromFloat(std::strtof(literal.c_str(), NULL));
+			ScalarConverter::printFromFloat(strtof(literal.c_str(), NULL));
 			break;
 
 		case TYPE_DOUBLE:
-			printFromDouble(std::strtod(literal.c_str(), NULL));
+			ScalarConverter::printFromDouble(strtod(literal.c_str(), NULL));
 			break;
 
 		case TYPE_PSEUDO:
-			printFromPseudo(literal);
+			ScalarConverter::printFromPseudo(literal);
 			break;
 		
 		default:
@@ -30,54 +30,66 @@ void	ScalarConverter::convert( const std::string& literal ) {
 	return ;
 }
 
-void	printFromChar(char C) {
+void	ScalarConverter::printFromChar(char C) {
 	int		I = static_cast<int>(C);
 	float	F = static_cast<float>(C);
 	double	D = static_cast<double>(C);
 
-	std::cout << "Char: '" << C << "'" << std::endl;
+	if (!isprint(C))
+		std::cout << "Char: Non displayable" << std::endl;
+	else
+		std::cout << "Char: '" << C << "'" << std::endl;
 	std::cout << "Int: " << I << std::endl;
 	std::cout << "Float: " << std::fixed << std::setprecision(1) << F << "f" << std::endl;
 	std::cout << "Double: " << D << std::endl;
 }
 
-void	printFromInt(int I) {
+void	ScalarConverter::printFromInt(int I) {
 	char	C = static_cast<char>(I);
 	float	F = static_cast<float>(I);
 	double	D = static_cast<double>(I);
 
-	std::cout << "Char: '" << C << "'" << std::endl;
+	if (!isprint(C))
+		std::cout << "Char: Non displayable" << std::endl;
+	else
+		std::cout << "Char: '" << C << "'" << std::endl;
 	std::cout << "Int: " << I << std::endl;
 	std::cout << "Float: " << std::fixed << std::setprecision(1) << F << "f" << std::endl;
 	std::cout << "Double: " << D << std::endl;
 }
 
-void	printFromFloat(float F) {
+void	ScalarConverter::printFromFloat(float F) {
 	char	C = static_cast<char>(F);
 	int		I = static_cast<int>(F);
 	double	D = static_cast<double>(F);
 
-	std::cout << "Char: '" << C << "'" << std::endl;
+	if (!isprint(C))
+		std::cout << "Char: Non displayable" << std::endl;
+	else
+		std::cout << "Char: '" << C << "'" << std::endl;
 	std::cout << "Int: " << I << std::endl;
 	std::cout << "Float: " << std::fixed << std::setprecision(1) << F << "f" << std::endl;
 	std::cout << "Double: " << D << std::endl;
 }
 
-void	printFromDouble(double D) {
+void	ScalarConverter::printFromDouble(double D) {
 	char	C = static_cast<char>(D);
 	int		I = static_cast<int>(D);
 	float	F = static_cast<float>(D);
 
-	std::cout << "Char: '" << C << "'" << std::endl;
+	if (!isprint(C))
+		std::cout << "Char: Non displayable" << std::endl;
+	else
+		std::cout << "Char: '" << C << "'" << std::endl;
 	std::cout << "Int: " << I << std::endl;
 	std::cout << "Float: " << std::fixed << std::setprecision(1) << F << "f" << std::endl;
 	std::cout << "Double: " << D << std::endl;
 }
 
-void printFromPseudo(const std::string& literal) {
+void	ScalarConverter::printFromPseudo(const std::string& literal) {
 	std::cout << "Char: " << "impossible" << std::endl;
 	std::cout << "Int: " << "impossible" << std::endl;
-	if (literal.back() == 'f') {
+	if (literal[literal.length() - 1] == 'f') {
         std::cout << "Float: " << literal << std::endl;
         std::cout << "Double: " << literal.substr(0, literal.size() - 1) << std::endl;
     }

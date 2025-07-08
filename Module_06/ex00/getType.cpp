@@ -23,7 +23,7 @@ ScalarConverter::ScalarType	ScalarConverter::getType(const std::string& literal)
 }
 
 bool	isChar( const std::string &literal ) {
-	return literal.length() == 1 && std::isprint(literal[0]) && !std::isdigit(literal[0]);
+	return literal.length() == 1 && !std::isdigit(literal[0]);
 }
 
 bool	isInt( const std::string &literal ) {
@@ -41,7 +41,7 @@ bool	isInt( const std::string &literal ) {
 }
 
 bool	isFloat(const std::string& literal) {
-	if (literal.length() < 2 || literal.back() != 'f')
+	if (literal.length() < 2 || literal[literal.length() - 1] != 'f')
 		return false;
 
 	std::string core = literal.substr(0, literal.length() - 1);

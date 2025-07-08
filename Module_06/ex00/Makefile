@@ -1,4 +1,4 @@
-NAME		= scalar
+NAME		= convert
 SRCS		= main.cpp ScalarConverter.cpp getType.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
