@@ -1,5 +1,5 @@
 NAME		= Serialization
-SRCS		= main.cpp
+SRCS		= main.cpp Serializer.cpp
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
