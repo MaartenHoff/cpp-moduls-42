@@ -1,4 +1,4 @@
-NAME		= 
+NAME		= iter
 SRCS		= main.cpp 
 OBJDIR		= .obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
