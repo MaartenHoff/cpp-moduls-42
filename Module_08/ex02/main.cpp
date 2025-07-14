@@ -1,39 +1,34 @@
 #include "MutantStack.hpp"
+#include <cassert>
+#include <list>
 
-// int main()
-// {
-// 	MutantStack<int> mstack;
+int main()
+{
+	MutantStack<int> mstack;
+	std::list<int> lst;
 
-// 	mstack.push(5);
-// 	mstack.push(17);
+	mstack.push(5);		lst.push_back(5);
+	mstack.push(17);	lst.push_back(17);
+	mstack.pop();		lst.pop_back();
+	mstack.push(3);		lst.push_back(3);
+	mstack.push(5);		lst.push_back(5);
+	mstack.push(737);	lst.push_back(737);
+	mstack.push(0); 	lst.push_back(0);
 
-// 	std::cout << mstack.top() << std::endl;
+	assert(mstack.size() == lst.size());
 
-// 	mstack.pop();
+	MutantStack<int>::iterator it1 = mstack.begin();
+	MutantStack<int>::iterator ite1 = mstack.end();
 
-// 	std::cout << mstack.size() << std::endl;
+	std::list<int>::iterator it2 = lst.begin();
+	std::list<int>::iterator ite2 = lst.end();
 
-// 	mstack.push(3);
-// 	mstack.push(5);
-// 	mstack.push(737);
-// 	//[...]
-// 	mstack.push(0);
+	while (it1 != ite1 && it2 != ite2) {
+		assert(*it1 == *it2);
+		std::cout << "mstack: " << *it1 << "\tlst: " << *it2 << std::endl;
+		++it1; ++it2;
+	}
+	assert(it1 == ite1 && it2 == ite2);
 
-// 	MutantStack<int>::iterator it = mstack.begin();
-// 	MutantStack<int>::iterator ite = mstack.end();
-
-// 	++it;
-// 	--it;
-// 	while (it != ite)
-// 	{
-// 		std::cout << *it << std::endl;
-// 		++it;
-// 	}
-// 	std::stack<int> s(mstack);
-// 	return 0;
-// }
-
-// // If you run it a first time with your MutantStack, and a second time replacing the
-// // MutantStack with, for example, a std::list, the two outputs should be the same. Of
-// // course, when testing another container, update the code below with the corresponding
-// // member functions (push() can become push_back()).
+	return 0;
+}
