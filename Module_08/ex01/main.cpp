@@ -32,6 +32,14 @@ int	main( void )
 			std::cout << "Expected exception: " << e.what() << std::endl;
 		}
 
+		std::cout << "\n--- special add func - Test ---" << std::endl;
+		Span s2(5);
+		int arr[] = {10, 20, 30, 40, 50};
+		std::vector<int> v(arr, arr + sizeof(arr) / sizeof(int));
+		s2.addNumbers(v.begin(), v.end());
+		std::cout << "Shortest span in s2: " << s2.shortestSpan() << std::endl;
+		std::cout << "Longest span in s2: " << s2.longestSpan() << std::endl;
+
 	} 
 	catch (const std::exception& e) {
 		std::cerr << "Unexpected error: " << e.what() << std::endl;

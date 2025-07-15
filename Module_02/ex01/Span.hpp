@@ -20,13 +20,6 @@ class Span
 		int		shortestSpan();
 		int		longestSpan();
 
-		template <typename InputIterator>
-		void addNumbers(InputIterator begin, InputIterator end) {
-			if (std::distance(begin, end) + _nums.size() > _maxSize)
-				throw AnException("Can't add range: would exceed max size.");
-			_nums.insert(_nums.end(), begin, end);
-		}
-
 		class AnException : public std::exception {
 			private:
 				std::string	_ex_msg;
