@@ -50,10 +50,10 @@ void	BitcoinExchange::processInput( const std::string &inputFile ) const {
 		}
 
 		std::string	date = line.substr( 0, delimiter );
-		double value;
-		try {
-			value = strtod(line.substr(delimiter + 3).c_str(), NULL);
-		} catch (...) {
+		std::string valueStr = line.substr(delimiter + 3);
+		char	*endptr = NULL;
+		double value = strtod(valueStr.c_str(), &endptr);
+		if (valueStr.empty() || endptr == valueStr.c_str() || (*endptr != '\0' && *endptr != 'f')) {
 			std::cout << "Error: invalid number => " << line.substr(delimiter + 3) << std::endl;
 			continue;
 		}
